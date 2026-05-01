@@ -59,6 +59,38 @@ graph TD
 
 ---
 
+## 📡 API Reference
+
+### Authentication
+- `POST /api/auth/admin/signup` - Register a new admin
+- `POST /api/auth/admin/signin` - Admin login
+- `POST /api/auth/user/signup` - Employee registration
+- `POST /api/auth/user/signin` - Employee login
+
+### Employee Management (Admin)
+- `GET /api/admin/employees` - Get all employees
+- `POST /api/admin/employees` - Add a new employee
+- `GET /api/admin/employees/:id` - Get single employee details
+- `DELETE /api/admin/employees/:id` - Remove an employee
+
+### Attendance
+- `POST /api/attendance/mark` - Mark today's attendance (Employee)
+- `GET /api/attendance/my` - Get own attendance history (Employee)
+- `GET /api/attendance/all` - View all attendance records (Admin)
+
+### Leave Management
+- `POST /api/leave/apply` - Submit a leave request (Employee)
+- `GET /api/leave/my` - View own leave requests (Employee)
+- `GET /api/leave/all` - View all pending requests (Admin)
+- `PUT /api/leave/:id/status` - Approve or Reject leave (Admin)
+
+### Notifications
+- `GET /api/notifications` - Fetch user-specific notifications
+- `PUT /api/notifications/:id/read` - Mark a notification as read
+- `PUT /api/notifications/read-all` - Mark all notifications as read
+
+---
+
 ## ⚙️ Quick Start
 
 ### Prerequisites
